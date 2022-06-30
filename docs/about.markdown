@@ -3,7 +3,9 @@ layout: page
 title: About
 permalink: /about/
 ---
-
+My name is Daniel, currently a Software Developer in Australia.
+I have mostly had exposure to Python as my main language for program development.
+Committed to learning new languages. Current language I am learning is Javascript.
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
 You can find the source code for Minima at GitHub:
