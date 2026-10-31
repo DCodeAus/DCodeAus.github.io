@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daniel · DCodeAus</title>
+  <meta name="description" content="Daniel, a software developer in Australia. Python, JavaScript and TypeScript, integration and middleware, and small tools that solve real problems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --surface: #ffffff;
+      --text: #1d1d1b;
+      --muted: #66645e;
+      --line: #e3e0d8;
+      --accent: #0f7b6c;
+      --accent-soft: #e2f1ee;
+      --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121413;
+        --surface: #1a1d1c;
+        --text: #ecebe6;
+        --muted: #9c9a93;
+        --line: #2b2f2d;
+        --accent: #4fd1b5;
+        --accent-soft: #17302b;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+    header { padding: 72px 0 40px; }
+    .handle { font-family: var(--mono); font-size: 14px; color: var(--accent); margin: 0 0 18px; }
+    .handle::before { content: "$ whoami → "; color: var(--muted); }
+    h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 20px; font-weight: 650; }
+    .lede { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0; }
+    .lede strong { color: var(--text); font-weight: 500; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line);
+      background: var(--surface); color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500;
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+
+    section { padding: 36px 0; border-top: 1px solid var(--line); }
+    h2 { font-family: var(--mono); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 22px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .card {
+      display: flex; flex-direction: column; gap: 8px;
+      background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+      padding: 18px 18px 16px; color: inherit; text-decoration: none;
+      transition: border-color .15s, transform .15s;
+    }
+    a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .card h3 { font-size: 17px; margin: 0; font-weight: 650; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; flex: 1; }
+    .meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+    .tag { background: var(--accent-soft); color: var(--accent); padding: 2px 8px; border-radius: 999px; }
+
+    .list { list-style: none; margin: 0; padding: 0; }
+    .list li { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 14px 0; border-bottom: 1px dashed var(--line); }
+    .list li:last-child { border-bottom: 0; }
+    .list a { font-weight: 500; }
+    .list p { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: 15px; }
+
+    .stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 22px; }
+    .stack h3 { font-size: 15px; margin: 0 0 6px; font-weight: 650; }
+    .stack p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    .graph img { width: 100%; height: auto; display: block; border-radius: 8px; }
+
+    footer { padding: 32px 0 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+    footer p { margin: 0 0 6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="handle">DCodeAus</p>
+      <h1>Hi, I'm Daniel.</h1>
+      <p class="lede">
+        A software developer in <strong>Australia</strong>, studying IT at uni and working mostly in
+        <strong>Python</strong> and <strong>JavaScript/TypeScript</strong>. My day-to-day leans towards
+        integration and middleware; my spare time goes on small tools that solve real problems.
+        Ethos: <strong>continual learning and integration</strong>.
+      </p>
+      <div class="links">
+        <a class="btn primary" href="https://github.com/DCodeAus">GitHub →</a>
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </header>
+
+    <section id="projects">
+      <h2>Things you can try right now</h2>
+      <div class="grid">
+        <a class="card" href="https://dcodeaus.github.io/WardrobeTracker/">
+          <h3>Off the Peg</h3>
+          <p>A wardrobe tracker that shows what your clothes actually cost per wear, and which pieces never leave the cupboard.</p>
+          <div class="meta"><span class="tag">Live</span> HTML · Supabase</div>
+        </a>
+        <a class="card" href="https://dcodeaus.github.io/aiExplained/">
+          <h3>AI Explained</h3>
+          <p>A beginner's guide to LLMs (tokens, training, prompting, agents) with interactive demos, quizzes and badges.</p>
+          <div class="meta"><span class="tag">Live</span> HTML · JS</div>
+        </a>
+        <a class="card" href="https://dcodeaus.github.io/hackathon-tracker/">
+          <h3>Build Days Hackathons</h3>
+          <p>A neon-themed tracker for upcoming and past hackathons around Australia.</p>
+          <div class="meta"><span class="tag">Live</span> HTML · JS</div>
+        </a>
+        <a class="card" href="https://dcodeaus.github.io/typingWeatherTracker/">
+          <h3>Typing Weather</h3>
+          <p>Your keystrokes forecast your mental climate. Reads your typing rhythm and turns it into a weather report, all in the browser.</p>
+          <div class="meta"><span class="tag">Live</span> JavaScript</div>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tools I've built</h2>
+      <ul class="list">
+        <li>
+          <a href="https://github.com/DCodeAus/AtlassianConfluenceScraping">Atlassian Confluence Scraping</a>
+          <span class="meta">PowerShell · Python</span>
+          <p>Gets a team's docs out of Confluence and into Azure DevOps Wiki or SharePoint, with no admin rights and nothing to install.</p>
+        </li>
+        <li>
+          <a href="https://github.com/DCodeAus/macCodexBatteryUsageMonitor">Codex Battery Monitor</a>
+          <span class="meta">Shell · macOS</span>
+          <p>A privacy-conscious monitor for diagnosing battery drain from screen-capturing AI agents on Apple silicon.</p>
+        </li>
+        <li>
+          <a href="https://github.com/DCodeAus/SaveSafariTabs">Save Safari Tabs</a>
+          <span class="meta">AppleScript · Shell</span>
+          <p>One command saves every open tab to Markdown and clears the browser, ready for an exam or a hackathon.</p>
+        </li>
+        <li>
+          <a href="https://github.com/DCodeAus/pokemon-finder">Pokemon Finder</a>
+          <span class="meta">Next.js · TypeScript</span>
+          <p>Search any Pokemon by name or Pokédex number using the PokéAPI.</p>
+        </li>
+        <li>
+          <a href="https://github.com/DCodeAus/Pi_Projects">Raspberry Pi projects</a>
+          <span class="meta">Python</span>
+          <p>E-ink name badges and a Bitcoin ticker, adapted for the Pi Zero 2 W.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What I work with</h2>
+      <div class="stack">
+        <div>
+          <h3>Languages</h3>
+          <p>Python, JavaScript, TypeScript, Node.js, Bash, PowerShell, SQL, HTML/CSS</p>
+        </div>
+        <div>
+          <h3>Interested in</h3>
+          <p>Cyber security, networking and infrastructure, integration and middleware, AI and automation</p>
+        </div>
+        <div>
+          <h3>How I learn</h3>
+          <p>By building. AI has made genuinely personal software possible, and it makes a pretty good teacher too.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="graph">
+      <h2>Recent activity</h2>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DCodeAus/DCodeAus/output/pacman-contribution-graph-dark.svg">
+        <img src="https://raw.githubusercontent.com/DCodeAus/DCodeAus/output/pacman-contribution-graph.svg" alt="Pac-Man eating my GitHub contribution graph" loading="lazy">
+      </picture>
+    </section>
+
+    <footer id="contact">
+      <p>Want to collaborate or have a question about a project? Open an issue on any of my <a href="https://github.com/DCodeAus?tab=repositories">repositories</a>.</p>
+      <p>© Daniel · <a href="https://github.com/DCodeAus">@DCodeAus</a></p>
+    </footer>
+  </div>
+</body>
+</html>
